@@ -1,0 +1,22 @@
+#instalação do node e acessórios necessários
+apt-get install npm
+npm install -g n
+ln -s /usr/bin/nodejs /usr/bin/node
+npm install --global nodemon
+npm install --global gulp
+
+#instalação do mongo
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+sudo apt-get install -y mongodb-org
+
+# dentro da pasta do projeto
+npm install --save express
+npm install --save body-parser
+npm install --save mongoose
+npm install --save gulp
+npm install --save gulp-uglify
+npm install --save gulp-ng-annotate
+npm install --save gulp-sourcemaps
+npm install --save gulp-stylus
+npm install --save gulp-nodemon
