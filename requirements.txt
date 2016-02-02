@@ -1,3 +1,6 @@
+#para rodar
+Cap.6: $gulp dev
+
 #instalação do node e acessórios necessários
 apt-get install npm
 npm install -g n
@@ -20,3 +23,6 @@ npm install --save gulp-ng-annotate
 npm install --save gulp-sourcemaps
 npm install --save gulp-stylus
 npm install --save gulp-nodemon
+npm install --save jwt-simple
+npm install --save lodash
+npm install --save bcrypt
