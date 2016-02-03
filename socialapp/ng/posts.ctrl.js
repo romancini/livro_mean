@@ -6,7 +6,7 @@ angular.module('app')
         username: 'dickeyxxx',
         body: $scope.postBody
       }).success(function (post) {
-        //$scope.posts.unshift(post)
+        //'$scope.posts.unshift(post)
         $scope.postBody = null
       })
     }

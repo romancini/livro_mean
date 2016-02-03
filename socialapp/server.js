@@ -1,9 +1,9 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-
 var app = express()
 app.use(bodyParser.json())
 
+app.use(require('./auth'))
 app.use('/api/posts', require('./controllers/api/posts'))
 app.use( require('./controllers/static'))
 // equivalent to: app.use('/', require('./controllers/static'))
