@@ -26,3 +26,5 @@ npm install --save gulp-nodemon
 npm install --save jwt-simple
 npm install --save lodash
 npm install --save bcrypt
+npm install --save ws
+npm install --global wscat

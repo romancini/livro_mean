@@ -4,27 +4,21 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/app.css">
 </head>
-<body ng-app='app'>
-  <div ng-view></div>
-  <div ng-controller='PostsCtrl' class='container'>
-    <h1>Recent Posts</h1>
-    <form role='form'>
-      <div class='form-group'>
-        <div class='input-group'>
-          <input ng-model='postBody' class='form-control' />
-          <span class='input-group-btn'>
-            <button ng-click='addPost()' class='btn btn-default'>Add Post</button>
-          </span>
-        </div>
-      </div>
-    </form>
-    <ul class='list-group'>
-      <li ng-repeat='post in posts' class='list-group-item'>
-        <strong>@{{ post.username }}</strong>
-        <span>{{ post.body }}</span>
-      </li>
+<body ng-app='app' ng-controller='ApplicationCtrl'>
+  <nav class='navbar navbar-default'>
+  <div class='container'>
+    <ul class='nav navbar-nav'>
+      <li><a href="/#/">Posts</a></li>
+      <li><a href="/#/register">Register</a></li>
+      <li><a href="/#/login">Login</a></li>
     </ul>
+    <p ng-if='currentUser' class="navbar-text navbar-right">
+      Signed in as {{currentUser.username}}
+    </p>
   </div>
+  </nav>
+  </nav>
+  <div ng-view></div>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js'></script>
   <script src='/app.js'></script>
